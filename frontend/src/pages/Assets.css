@@ -1,0 +1,278 @@
+.assets-page {
+    padding: 18px 20px 30px;
+}
+
+.assets-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.assets-header h1 {
+    margin: 0;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #202938;
+}
+
+.assets-header p {
+    margin: 8px 0 0;
+    color: #5f6977;
+    font-size: 21px;
+}
+
+.add-asset-btn {
+    border: none;
+    background: #2f6df6;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(47, 109, 246, 0.2);
+}
+
+.add-asset-btn:hover {
+    background: #255fe2;
+}
+
+.assets-table-container {
+    background: #ffffff;
+    border: 1px solid #dfe6ee;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.02);
+}
+
+.assets-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.assets-table th,
+.assets-table td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e5ebf3;
+}
+
+.assets-table th {
+    background: #f2f5f9;
+    color: #5f6977;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.assets-table td {
+    font-size: 17px;
+    color: #202938;
+}
+
+.status-badge,
+.condition-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.status-badge {
+    background: #dff9ee;
+    color: #2d9a6e;
+}
+
+.condition-badge {
+    background: #e4f0ff;
+    color: #2d6be6;
+}
+
+.action-btn {
+    border: 1px solid transparent;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 8px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.edit-btn {
+    background: #f5f7fb;
+    color: #212d3d;
+    border-color: #dfe6ee;
+}
+
+.delete-btn {
+    background: #fff1f1;
+    color: #d45252;
+    border-color: #f5c2c2;
+}
+
+.empty-assets {
+    padding: 50px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 18px;
+}
+
+/* Modal */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.asset-modal {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.asset-modal h2 {
+    margin: 0 0 20px;
+}
+
+.asset-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cancel-btn {
+    border: 1px solid #d1d5db;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.save-btn {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.save-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.error-message {
+    padding: 10px;
+    background: #fef2f2;
+    color: #dc2626;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+    .assets-page {
+        padding: 16px;
+    }
+
+    .assets-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .assets-header h1 {
+        font-size: 36px;
+    }
+
+    .assets-header p {
+        font-size: 16px;
+    }
+
+    .assets-table-container {
+        overflow-x: auto;
+    }
+
+    .assets-table {
+        min-width: 700px;
+    }
+}
+
+@media (max-width: 560px) {
+    .assets-header h1 {
+        font-size: 30px;
+    }
+
+    .add-asset-btn {
+        width: 100%;
+    }
+
+    .assets-table th,
+    .assets-table td {
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+
+    .action-btn {
+        padding: 7px 10px;
+        margin-right: 4px;
+        font-size: 12px;
+    }
+
+    .asset-modal {
+        padding: 20px 16px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .cancel-btn,
+    .save-btn {
+        width: 100%;
+    }
+}
